@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:5001';
+const BACKEND_URL = 'http://localhost:5001'||'https://pulse-backend-070y.onrender.com';
 
 export const fetchHeadlines = createAsyncThunk(
     'news/fetchHeadlines',
