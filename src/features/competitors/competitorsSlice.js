@@ -7,7 +7,7 @@ import { collection, addDoc, getDocs, deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../../lib/firebase';
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:5001'; // The URL of our new backend
+const BACKEND_URL = 'http://localhost:5001'||'https://pulse-backend-070y.onrender.com'; // The URL of our new backend
 
 export const fetchCompetitors = createAsyncThunk(
     'competitors/fetchCompetitors',
