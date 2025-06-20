@@ -7,7 +7,10 @@ import { collection, addDoc, getDocs, deleteDoc, doc } from 'firebase/firestore'
 import { db } from '../../lib/firebase';
 import axios from 'axios';
 
-const BACKEND_URL = 'http://localhost:5001'||'https://pulse-backend-070y.onrender.com'; // The URL of our new backend
+
+const BACKEND_URL = process.env.NODE_ENV === 'production'
+  ? 'https://pulse-backend-070y.onrender.com' // Your live URL from Render
+  : 'http://localhost:5001'; // Your local URL for development
 
 export const fetchCompetitors = createAsyncThunk(
     'competitors/fetchCompetitors',
